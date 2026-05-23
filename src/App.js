@@ -203,6 +203,7 @@ const App = () => {
       updatedProductList.map((item) => {
         localStorage.setItem('productsQuantity', JSON.stringify(item.quantity));
         setProductsQuantity(item.quantity);
+        return null;
       });
     } else {
       const productListArray = updatedProductList.map((item) => item.quantity);
