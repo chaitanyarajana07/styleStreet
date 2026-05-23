@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import addToCart from "../../assets/images/add-to-cart.png";
 import QuickAddToCart from './QuickAddToCart'
@@ -43,21 +43,7 @@ const Product = ({
     setAllAttributesAreSelected(true);
   };
 
-  const handleProductHasNoAttributes = useCallback(() => {
-    if (item.attributes.length === 0) {
-      handleAllAttributesAreSelected();
-    }
-  }, [item.attributes.length]);
 
-  useEffect(() => {
-    handleProductHasNoAttributes();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [handleProductHasNoAttributes]);
-
-  useEffect(() => {
-    handleProductHasNoAttributes();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [handleProductHasNoAttributes]);
 
   useEffect(() => {
     filterCurrency(item, selectedCurrency);

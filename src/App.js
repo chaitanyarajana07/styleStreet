@@ -180,7 +180,7 @@ const App = () => {
     }
 
     // Create unique id
-    updatedProductList.map((updatedProduct) => {
+    updatedProductList.forEach((updatedProduct) => {
       const firstValue = Object.values(
         updatedProduct.userSelectedAttributes[0] || []
       );
@@ -192,7 +192,7 @@ const App = () => {
       );
 
       const productId = updatedProduct.id;
-      return (updatedProduct.uniqueId = `${productId}-${firstValue}-${secondValue}-${thirdValue}`);
+      updatedProduct.uniqueId = `${productId}-${firstValue}-${secondValue}-${thirdValue}`;
     });
     // Update cart items
     setCartItems(updatedProductList);
