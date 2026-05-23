@@ -51,11 +51,13 @@ const Product = ({
 
   useEffect(() => {
     handleProductHasNoAttributes();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [handleProductHasNoAttributes]);
 
   useEffect(() => {
     handleProductHasNoAttributes();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [handleProductHasNoAttributes]);
 
   useEffect(() => {
     filterCurrency(item, selectedCurrency);
