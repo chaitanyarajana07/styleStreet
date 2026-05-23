@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@jridgewell/sourcemap-codec": "^1.5.5",
+    "@rollup/plugin-terser": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,6 +17,7 @@
     "react-router-dom": "^6.16.0",
     "react-scripts": "^5.0.1",
     "react-simple-image-slider": "^2.4.1",
+    "svgo": "^2.8.2",
     "uuid": "^9.0.1",
     "uuidv4": "^6.2.13",
     "web-vitals": "^2.1.4"
